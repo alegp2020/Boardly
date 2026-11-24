@@ -1,0 +1,1 @@
+const tarjetaNueva = queryselector.Eleme
