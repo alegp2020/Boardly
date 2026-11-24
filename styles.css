@@ -4,10 +4,10 @@
     --fondo-pagina: #FFF8EC;
     --barra-superior: #BFE3DD;
     --columna-pendiente: #FDE2D6;
-    --columna-en-progreso: #D6E6FA;
+    --columna-en-ideas: #D6E6FA;
     --columna-hecho: #D4EFDF;
     --columna-completada: #99E884;
-    --columna-archivado:#E6E1F0;
+    --columna-proceso:#E6E1F0;
     --tarjeta: #FFFFFF;
     --btones: #FFD59A;
     --btones-hover: #FFC069;
@@ -93,10 +93,73 @@ a:hover{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--tarjeta);
     padding: 1rem;
     border-radius: 10px;
     margin: 1rem;
+}
+
+.ideas{
+    background-color: var(--columna-en-ideas);
+    color: var(--texto);
+}
+
+.pendientes{
+    background-color: var(--columna-pendiente);
+    color: var(--texto);
+}
+
+.procesos{
+    background-color: var(--columna-proceso);
+    color: var(--texto);
+}
+
+.hechos{
+    background-color: var(--columna-hecho);
+    color: var(--texto);
+}
+
+.nueva-carta-Contenedor{
+    display: none;
+}
+
+.nueva-carta-Contenedor{
+    background-color: var(--fondo-pagina);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.nueva-carta-Contenedor input{
+    border: 1px solid var(--texto);
+    border-radius: 5px;
+    padding: 0.2rem;
+    margin: 0.5rem;
+}
+
+.cerrar-carta{
+    background-color: var(--btones);
+    color: var(--texto);
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.cerrar-carta:hover{
+    background-color: var(--btones-hover);
+}
+
+.añadir-definitiva{
+    background-color: var(--btones-hover);
+    color: var(--texto);
+    padding: 0.5rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.añadir-definitiva:hover{
+    background-color: var(--btones);
 }
 
 .añadir-carta{

@@ -1,41 +1,69 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Boardly</title>
-  </head>
-  <body>
-    <nav>
-      <ul>
-        <li>
-          <a href="#"><img src="logo-icono(1).svg" alt="Logo" width="50" height="50" /></a>
-        </li>
-        <li><a href="login.html">Iniciar sesión</a></li>
-        <li><a href="registrase.html">Registrarse</a></li>
-      </ul>
-    </nav>
 
-    <h1 class="titulo">Boardly</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Boardly</title>
+</head>
 
-    <section class="entero">
-      <div class="columna">
-        <h2>Ideas</h2>
-        <button class="añadir-carta" type="button">Añadir carta</button>
+<body>
+  <nav>
+    <ul>
+      <li>
+        <a href="#"><img src="logo-icono(1).svg" alt="Logo" width="50" height="50" /></a>
+      </li>
+      <li><a href="login.html">Iniciar sesión</a></li>
+      <li><a href="registrase.html">Registrarse</a></li>
+    </ul>
+  </nav>
+
+  <h1 class="titulo">Boardly</h1>
+
+  <section class="entero">
+    <div class="columna ideas">
+      <h2>Ideas</h2>
+      <div class="nueva-carta-Contenedor">
+        <input type="text" class="titulo-Input">
+        <button type="button" class="añadir-definitiva">Añadir</button>
+        <button type="button" class="cerrar-carta">Cerrar</button>
       </div>
-      <div class="columna">
-        <h2>Pendiente</h2>
-        <button class="añadir-carta" type="button">Añadir carta</button>
+      <div class="tarjetasAñadidas"></div>
+      <button class="añadir-carta" type="button">Añadir carta</button>
+    </div>
+    <div class="columna pendientes">
+      <h2>Pendiente</h2>
+      <div class="nueva-carta-Contenedor">
+        <input type="text" class="titulo-Input">
+        <button type="button" class="añadir-definitiva">Añadir</button>
+        <button type="button" class="cerrar-carta">Cerrar</button>
       </div>
-      <div class="columna">
-        <h2>En Proceso</h2>
-        <button class="añadir-carta" type="button">Añadir carta</button>
+      <div class="tarjetasAñadidas"></div>
+      <button class="añadir-carta" type="button">Añadir carta</button>
+    </div>
+    <div class="columna procesos">
+      <h2>Proceso</h2>
+      <div class="nueva-carta-Contenedor">
+        <input type="text" class="titulo-Input">
+        <button type="button" class="añadir-definitiva">Añadir</button>
+        <button type="button" class="cerrar-carta">Cerrar</button>
       </div>
-      <div class="columna">
-        <h2>Hecho</h2>
-        <button class="añadir-carta" type="button">Añadir carta</button>
+      <div class="tarjetasAñadidas"></div>
+      <button class="añadir-carta" type="button">Añadir carta</button>
+    </div>
+    <div class="columna hechos">
+      <h2>Hecho</h2>
+      <div class="nueva-carta-Contenedor">
+        <input type="text" class="titulo-Input">
+        <button type="button" class="añadir-definitiva">Añadir</button>
+        <button type="button" class="cerrar-carta">Cerrar</button>
       </div>
-    </section>
-  </body>
+      <div class="tarjetasAñadidas"></div>
+      <button class="añadir-carta" type="button">Añadir carta</button>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+
 </html>
