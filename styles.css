@@ -1,203 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
-:root{
-    --fondo-pagina: #FFF8EC;
-    --barra-superior: #BFE3DD;
-    --columna-pendiente: #FDE2D6;
-    --columna-en-ideas: #D6E6FA;
-    --columna-hecho: #D4EFDF;
-    --columna-completada: #99E884;
-    --columna-proceso:#E6E1F0;
-    --tarjeta: #FFFFFF;
-    --btones: #FFD59A;
-    --btones-hover: #FFC069;
-    --prioridad-alta: #FF6B6B;
-    --prioridad-media: #4ECDC4;
-    --prioridad-baja: #45B7D1;
-    --texto: #2F4858;
+:root {
+  --fondo-pagina: #fff8ec;
+  --barra-superior: #bfe3dd;
+  --columna-pendiente: #fde2d6;
+  --columna-en-ideas: #d6e6fa;
+  --columna-hecho: #d4efdf;
+  --columna-completada: #99e884;
+  --columna-proceso: #e6e1f0;
+  --tarjeta: #ffffff;
+  --btones: #ffd59a;
+  --btones-hover: #ffc069;
+  --prioridad-alta: #ff6b6b;
+  --prioridad-media: #4ecdc4;
+  --prioridad-baja: #45b7d1;
+  --texto: #2f4858;
 }
 
-
-body{
-    background-color: var(--fondo-pagina);
-    font-family: "Nunito", sans-serif;
-    margin: 0;
-    padding: 0;
+body {
+  background-color: var(--fondo-pagina);
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    padding: 1rem;
-    background-color: var(--barra-superior);
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--barra-superior);
 }
 
-ul{
-    align-items: center;
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
+ul {
+  align-items: center;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
-li{
-    text-decoration: none;
-    color: var(--texto);
-    font-family: "Nunito", sans-serif;
+li {
+  text-decoration: none;
+  color: var(--texto);
+  font-family: "Nunito", sans-serif;
 }
 
-a{
-    text-decoration: none;
-    color: var(--texto);
-    font-family: "Nunito", sans-serif;
+a {
+  text-decoration: none;
+  color: var(--texto);
+  font-family: "Nunito", sans-serif;
 }
 
-a:hover{
-    text-decoration: underline;
+a:hover {
+  text-decoration: underline;
 }
 
-.titulo{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    font-family: "Nunito", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    color: var(--texto);
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: var(--texto);
 }
 
-.subtitulo{
-    font-family: "Nunito", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    color: var(--texto);
+.subtitulo {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  color: var(--texto);
 }
 
-.entero{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem;
+.entero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
 }
 
-.columna{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 1rem;
-    border-radius: 10px;
-    margin: 1rem;
-    width: 400px;
-    min-height: 500px;
+.columna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 1rem;
+  width: 400px;
+  min-height: 500px;
 }
 
-.ideas{
-    background-color: var(--columna-en-ideas);
-    color: var(--texto);
+.ideas {
+  background-color: var(--columna-en-ideas);
+  color: var(--texto);
 }
 
-.pendientes{
-    background-color: var(--columna-pendiente);
-    color: var(--texto);
+.pendientes {
+  background-color: var(--columna-pendiente);
+  color: var(--texto);
 }
 
-.procesos{
-    background-color: var(--columna-proceso);
-    color: var(--texto);
+.procesos {
+  background-color: var(--columna-proceso);
+  color: var(--texto);
 }
 
-.hechos{
-    background-color: var(--columna-hecho);
-    color: var(--texto);
+.hechos {
+  background-color: var(--columna-hecho);
+  color: var(--texto);
 }
 
-.btn-close{
-    background-color: var(--btones);
-    color: var(--texto);
-    padding: 0.5rem;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
+.btn-close {
+  background-color: var(--btones);
+  color: var(--texto);
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
 }
 
-.btn-close:hover{
-    background-color: var(--btones-hover);
+.btn-close:hover {
+  background-color: var(--btones-hover);
 }
 
-.añadir-definitiva{
-    background-color: var(--btones-hover);
-    color: var(--texto);
-    padding: 0.5rem;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
+.añadir-definitiva {
+  background-color: var(--btones-hover);
+  color: var(--texto);
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
 }
 
-.añadir-definitiva:hover{
-    background-color: var(--btones);
+.añadir-definitiva:hover {
+  background-color: var(--btones);
 }
 
-.añadir-carta{
-    background-color: var(--btones);
-    color: var(--texto);
-    padding: 0.5rem;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
+.añadir-carta {
+  background-color: var(--btones);
+  color: var(--texto);
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
 }
 
-.añadir-carta:hover{
-    background-color: var(--btones-hover);
+.añadir-carta:hover {
+  background-color: var(--btones-hover);
 }
 
-
-.modal-header{
-    background-color: var(--barra-superior);
+.modal-header {
+  background-color: var(--barra-superior);
 }
-.modal-body{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 10px;
-    background-color: var(--fondo-pagina);
-}
-
-.modal-body select{
-    border-radius: 15px;
-    padding:5px;
-    color: var(--texto);
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 10px;
+  background-color: var(--fondo-pagina);
 }
 
-.modal-body input{
-    border:1px solid var(--texto);
-    border-radius: 15px;
-    padding: 5px;
+.modal-body select {
+  border-radius: 15px;
+  padding: 5px;
+  color: var(--texto);
 }
 
-.borde-pegatina{
-    border-style: dotted;
-    width: 70%;
-    height: 90%;
-    padding: 15px;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    border-color: grey;
+.modal-body input {
+  border: 1px solid var(--texto);
+  border-radius: 15px;
+  padding: 5px;
 }
 
-.formulario{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    gap: 0.5rem;
+.formulario {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 0.5rem;
+}
+
+.dibujoTarjeta {
+  background-color: var(--tarjeta);
+  border-radius: 20px;
+  padding: 15px;
+  width: 220px;
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+.eliminarCartaNueva {
+  background-color: var(--btones);
+  color: var(--texto);
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.eliminarCartaNueva:hover {
+  background-color: var(--btones-hover);
 }
