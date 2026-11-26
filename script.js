@@ -49,17 +49,20 @@ function guardarCartaNueva() {
     <p>Objetivos: ${objetivosInput}</p>
     `;
   cartaAñadidaBtn[0].append(nuevTarjetaConInput);
-  nuevTarjetaConInput.addEventListener("dragstart",function(){
+  contarTarjetasColumna();
+
+  nuevTarjetaConInput.addEventListener("dragstart", function () {
     cartasArrastradas(nuevTarjetaConInput);
-  })
+  });
   const eliminarCartaNUeva = document.createElement("button");
   eliminarCartaNUeva.classList.add("eliminarCartaNueva");
-  eliminarCartaNUeva.textContent="Eliminar";
+  eliminarCartaNUeva.textContent = "Eliminar";
   nuevTarjetaConInput.append(eliminarCartaNUeva);
 
-  eliminarCartaNUeva.addEventListener("click",function(){
+  eliminarCartaNUeva.addEventListener("click", function () {
     eliminarCartaCreada(nuevTarjetaConInput);
-  })
+    contarTarjetasColumna();
+  });
   tituloCrataNueva[0].value = "";
   descripcionCartaNueva[0].value = "";
   objetivosOpcionales[0].value = "";
@@ -72,26 +75,39 @@ function guardarCartaNueva() {
   } else {
     nuevTarjetaConInput.style.backgroundColor = "var(--prioridad-baja)";
   }
-};
+}
 
-function eliminarCartaCreada(cartaELiminada){
-    cartaELiminada.remove();
+function eliminarCartaCreada(cartaELiminada) {
+  cartaELiminada.remove();
 }
 
 let tarejetaEnMovimiento;
 for (let i = 0; i < enteroTablon.length; i++) {
   const columnaActualGuardada = enteroTablon[i];
+  const tarjetasContendor = columnaActualGuardada.getElementsByClassName("tarjetasAñadidas")[0];
+  columnaActualGuardada.addEventListener("dragover", function (evento) {
+    evento.preventDefault();
+  });
+  columnaActualGuardada.addEventListener("drop", function (evento) {
+    evento.preventDefault();
+    console.log("Se ha soltado en ", columnaActualGuardada);
+    tarjetasContendor.append(tarejetaEnMovimiento);
+    contarTarjetasColumna();
+  });
+}
 
-  columnaActualGuardada.addEventListener("dragover",function(evento){
-    evento.preventDefault();
-  });
-  columnaActualGuardada.addEventListener("drop",function(evento){
-    evento.preventDefault();
-    console.log("Se ha soltado en ",columnaActualGuardada);
-    columnaActualGuardada.append(tarejetaEnMovimiento);
-  });
+function cartasArrastradas(cartaArrstrable) {
+  tarejetaEnMovimiento = cartaArrstrable;
 }
-function cartasArrastradas(cartaArrstrable){
-  tarejetaEnMovimiento=cartaArrstrable;
+
+function contarTarjetasColumna() {
+  for (let i = 0; i < enteroTablon.length; i++) {
+    const columnaGuardada = enteroTablon[i];
+    const tarjetasAñadidad =columnaGuardada.getElementsByClassName("tarjetasAñadidas")[0];
+    const conteoDeTarjetas = tarjetasAñadidad.children.length;
+    const numeroTarjeta = document.getElementsByClassName("numeroTarjetas")[i];
+    numeroTarjeta.textContent = conteoDeTarjetas;
+  }
 }
+
 
