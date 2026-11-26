@@ -39,18 +39,18 @@ function guardarCartaNueva() {
 
   nuevTarjetaConInput.classList.add("dibujoTarjeta");
   //se puede arrastrar
-  nuevTarjetaConInput.draggable = "true";
+  nuevTarjetaConInput.draggable = true;
   //dragstar se empieza a arastra
   //dragover tarjeta encima de la column
   //drop soltar tarjeta creada en column
   nuevTarjetaConInput.innerHTML = `
-    <h5>${inputTituloCarta}</h5>
-    <p>${inputDescripcion}</p>
-    <p>${objetivosInput}</p>
+    <h5>Titulo: ${inputTituloCarta}</h5>
+    <p>Descripción: ${inputDescripcion}</p>
+    <p>Objetivos: ${objetivosInput}</p>
     `;
   cartaAñadidaBtn[0].append(nuevTarjetaConInput);
   nuevTarjetaConInput.addEventListener("dragstart",function(){
-    cartasArastradas(nuevTarjetaConInput);
+    cartasArrastradas(nuevTarjetaConInput);
   })
   const eliminarCartaNUeva = document.createElement("button");
   eliminarCartaNUeva.classList.add("eliminarCartaNueva");
@@ -78,7 +78,20 @@ function eliminarCartaCreada(cartaELiminada){
     cartaELiminada.remove();
 }
 
-function cartasArastradas(cartaArrstrable){
+let tarejetaEnMovimiento;
+for (let i = 0; i < enteroTablon.length; i++) {
+  const columnaActualGuardada = enteroTablon[i];
 
+  columnaActualGuardada.addEventListener("dragover",function(evento){
+    evento.preventDefault();
+  });
+  columnaActualGuardada.addEventListener("drop",function(evento){
+    evento.preventDefault();
+    console.log("Se ha soltado en ",columnaActualGuardada);
+    columnaActualGuardada.append(tarejetaEnMovimiento);
+  });
+}
+function cartasArrastradas(cartaArrstrable){
+  tarejetaEnMovimiento=cartaArrstrable;
 }
 
