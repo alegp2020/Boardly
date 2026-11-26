@@ -209,3 +209,17 @@ a:hover {
 .eliminarCartaNueva:hover {
   background-color: var(--btones-hover);
 }
+
+h2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  gap: 2rem;
+}
+.numeroTarjetas{
+  background-color: var(--btones);
+    padding: 7px 10px;
+  font-size: 1rem;
+  border-radius: 50%;
+}
