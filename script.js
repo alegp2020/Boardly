@@ -1,4 +1,4 @@
-const enteroTablon = document.getElementsByClassName("entero");
+const enteroTablon = document.getElementsByClassName("columna");
 const botonAñadirCarta = document.getElementsByClassName("añadir-carta");
 
 const cartaAñadidaBtn = document.getElementsByClassName("tarjetasAñadidas");
