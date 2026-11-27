@@ -1,0 +1,68 @@
+:root {
+  --fondo-pagina: #fff8ec;
+  --barra-superior: #bfe3dd;
+  --columna-pendiente: #fde2d6;
+  --columna-en-ideas: #d6e6fa;
+  --columna-hecho: #d4efdf;
+  --columna-completada: #99e884;
+  --columna-proceso: #e6e1f0;
+  --tarjeta: #ffffff;
+  --btones: #ffd59a;
+  --btones-hover: #ffc069;
+  --prioridad-alta: #ff6b6b;
+  --prioridad-media: #4ecdc4;
+  --prioridad-baja: #45b7d1;
+  --texto: #2f4858;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fondo-pagina);
+    color: var(--texto);
+}
+
+form{
+    background-color: var(--tarjeta);
+    padding: 40px;
+    border: 1px solid var(--barra-superior);
+    border-radius: 10px;
+}
+
+label{
+    color: var(--texto);
+}
+
+input{
+    color: var(--texto);
+}
+
+.boton-entrar-login{
+    color: var(--texto);
+    background-color: var(--btones);
+    border-radius: 10px;
+    border: none;
+    padding: 3px;
+}
+
+.boton-entrar-login:hover{
+    color: var(--texto);
+    background-color: var(--btones-hover);
+    border-radius: 10px;
+    border: none;
+    padding: 3px;
+}
+
+
+a{
+    color: var(--texto);
+    margin-left: 5px;
+}
+
+a:hover{
+    text-decoration: none;
+    color: var(--btones-hover);
+}
