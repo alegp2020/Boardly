@@ -110,4 +110,10 @@ function contarTarjetasColumna() {
   }
 }
 
+const botonCerrarSesion = document.querySelector(".cerrar-sesion");
+botonCerrarSesion.addEventListener("click",function(){
+  window.location.href = "login.html";
+})
+
+
 
