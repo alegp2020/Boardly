@@ -115,5 +115,12 @@ botonCerrarSesion.addEventListener("click",function(){
   window.location.href = "login.html";
 })
 
+function nombreEnPantalla(){
+  const parrafoNombre = document.querySelector(".nombre");
+  parrafoNombre.textContent =   localStorage.getItem("nombre");
+}
+
+nombreEnPantalla();
+
 
 
