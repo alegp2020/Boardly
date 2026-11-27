@@ -210,16 +210,29 @@ a:hover {
   background-color: var(--btones-hover);
 }
 
-h2{
+h2 {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 5px;
   gap: 2rem;
 }
-.numeroTarjetas{
+.numeroTarjetas {
   background-color: var(--btones);
-    padding: 7px 10px;
+  padding: 7px 10px;
   font-size: 1rem;
   border-radius: 50%;
+}
+
+.cerrar-sesion {
+  background-color: var(--btones-hover);
+  color: var(--texto);
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.cerrar-sesion:hover{
+  background-color: var(--btones);
 }
